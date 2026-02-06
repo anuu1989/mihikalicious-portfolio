@@ -1,0 +1,200 @@
+.rate-card {
+  padding: 8rem 0;
+  background: var(--bg-cream);
+}
+
+.rate-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 6rem;
+}
+
+.rate-header {
+  margin-bottom: 4rem;
+  text-align: center;
+}
+
+.rate-label {
+  font-size: 0.7rem;
+  letter-spacing: 3px;
+  color: var(--text-light);
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.rate-title {
+  font-size: 3.5rem;
+  font-weight: 400;
+  line-height: 1.2;
+  color: var(--text-dark);
+  font-family: 'Bodoni Moda', 'Playfair Display', serif;
+  letter-spacing: -2px;
+}
+
+.rates-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.rate-item {
+  background: var(--bg-white);
+  border-radius: 16px;
+  padding: 2.5rem 2rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+}
+
+.rate-item:hover {
+  border-color: var(--text-dark);
+  transform: translateY(-8px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1);
+}
+
+.rate-icon {
+  font-size: 2.5rem;
+  color: var(--text-dark);
+  margin-bottom: 1.5rem;
+  opacity: 0.8;
+  transition: all 0.3s ease;
+}
+
+.rate-item:hover .rate-icon {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.rate-service {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text-dark);
+  margin-bottom: 1rem;
+  letter-spacing: 0.3px;
+}
+
+.rate-price {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  font-family: 'Bodoni Moda', serif;
+}
+
+.rate-footer {
+  text-align: center;
+  padding-top: 3rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.rate-footer p {
+  font-size: 0.9rem;
+  color: var(--text-medium);
+  margin-bottom: 2rem;
+  letter-spacing: 0.3px;
+}
+
+.rate-cta {
+  display: inline-block;
+  padding: 1rem 2.5rem;
+  background: var(--text-dark);
+  color: white;
+  text-decoration: none;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+}
+
+.rate-cta:hover {
+  background: var(--secondary-color);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(155, 89, 182, 0.25);
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .rate-card {
+    padding: 6rem 0;
+  }
+
+  .rate-container {
+    padding: 0 4rem;
+  }
+
+  .rate-title {
+    font-size: 3rem;
+  }
+
+  .rates-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .rate-card {
+    padding: 5rem 0;
+  }
+
+  .rate-container {
+    padding: 0 2rem;
+  }
+
+  .rate-header {
+    margin-bottom: 3rem;
+  }
+
+  .rate-title {
+    font-size: 2.5rem;
+  }
+
+  .rates-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+  }
+
+  .rate-item {
+    padding: 2rem 1.5rem;
+  }
+
+  .rate-service {
+    font-size: 0.95rem;
+  }
+
+  .rate-price {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .rate-container {
+    padding: 0 1.5rem;
+  }
+
+  .rate-title {
+    font-size: 2rem;
+  }
+
+  .rate-label {
+    font-size: 0.65rem;
+    letter-spacing: 2px;
+  }
+
+  .rate-icon {
+    font-size: 2rem;
+  }
+
+  .rate-footer p {
+    font-size: 0.85rem;
+  }
+
+  .rate-cta {
+    padding: 0.9rem 2rem;
+    font-size: 0.85rem;
+  }
+}
