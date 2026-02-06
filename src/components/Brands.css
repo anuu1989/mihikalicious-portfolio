@@ -1,0 +1,213 @@
+.brands {
+  padding: 8rem 0;
+  background: var(--bg-white);
+}
+
+.brands-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 6rem;
+}
+
+.brands-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.brands-label {
+  font-size: 0.7rem;
+  letter-spacing: 3px;
+  color: var(--text-light);
+  margin-bottom: 1rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.brands-title {
+  font-size: 3.5rem;
+  font-weight: 400;
+  line-height: 1.2;
+  color: var(--text-dark);
+  margin-bottom: 1rem;
+  font-family: 'Bodoni Moda', 'Playfair Display', serif;
+  letter-spacing: -2px;
+}
+
+.brands-subtitle {
+  font-size: 1rem;
+  color: var(--text-medium);
+  font-weight: 400;
+  letter-spacing: 0.3px;
+  line-height: 1.8;
+}
+
+.brands-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.brand-card {
+  background: var(--bg-cream);
+  border-radius: 12px;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  border: 1px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 140px;
+}
+
+.brand-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+  border-color: var(--secondary-color);
+  background: var(--bg-white);
+}
+
+.brand-logo-container {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.brand-logo-img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  filter: grayscale(100%);
+  opacity: 0.7;
+  transition: all 0.3s ease;
+}
+
+.brand-card:hover .brand-logo-img {
+  filter: grayscale(0%);
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+.brand-logo-placeholder {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, var(--bg-cream) 0%, var(--border-color) 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--secondary-color);
+  font-family: 'Bodoni Moda', serif;
+}
+
+.brand-name {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-dark);
+  letter-spacing: 0.3px;
+  line-height: 1.4;
+}
+
+.brands-footer {
+  text-align: center;
+  padding-top: 3rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.brands-footer p {
+  font-size: 0.9rem;
+  color: var(--text-light);
+  font-style: italic;
+  letter-spacing: 0.3px;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .brands {
+    padding: 6rem 0;
+  }
+
+  .brands-container {
+    padding: 0 4rem;
+  }
+
+  .brands-title {
+    font-size: 3rem;
+  }
+
+  .brands-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .brands {
+    padding: 4rem 0;
+  }
+
+  .brands-container {
+    padding: 0 2rem;
+  }
+
+  .brands-header {
+    margin-bottom: 3rem;
+  }
+
+  .brands-title {
+    font-size: 2.5rem;
+  }
+
+  .brands-subtitle {
+    font-size: 0.95rem;
+  }
+
+  .brands-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .brand-card {
+    padding: 1.5rem 1rem;
+    min-height: 120px;
+  }
+
+  .brand-logo {
+    font-size: 2.5rem;
+  }
+
+  .brand-name {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .brands-container {
+    padding: 0 1.5rem;
+  }
+
+  .brands-title {
+    font-size: 2rem;
+  }
+
+  .brands-label {
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+  }
+
+  .brands-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .brand-card {
+    padding: 1.5rem;
+  }
+}
