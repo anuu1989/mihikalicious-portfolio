@@ -1,17 +1,27 @@
 import './Brands.css'
+import skechersLogo from '../assets/images/brands/skechers.png'
+import starbucksLogo from '../assets/images/brands/starbucks.png'
+import superparkLogo from '../assets/images/brands/superpark.png'
+import mopaLogo from '../assets/images/brands/mopa.png'
+import natpatLogo from '../assets/images/brands/natpat.png'
+import bboxLogo from '../assets/images/brands/bbox.png'
+import dreambabyLogo from '../assets/images/brands/dreambaby.png'
+import twistedLogo from '../assets/images/brands/twisted.png'
+import onlyorganicsLogo from '../assets/images/brands/onlyorganics.png'
+import legoLogo from '../assets/images/brands/lego.png'
 
 const Brands = () => {
   const brands = [
-    { name: 'Skechers', image: '/src/assets/images/brands/skechers.png' },
-    { name: 'Starbucks', image: '/src/assets/images/brands/starbucks.png' },
-    { name: 'SuperPark', image: '/src/assets/images/brands/superpark.png' },
-    { name: 'MoPA', image: '/src/assets/images/brands/mopa.png' },
-    { name: 'NatPat', image: '/src/assets/images/brands/natpat.png' },
-    { name: 'BBox', image: '/src/assets/images/brands/bbox.png' },
-    { name: 'Dream Baby', image: '/src/assets/images/brands/dreambaby.png' },
-    { name: 'Twisted Ice Creams', image: '/src/assets/images/brands/twisted.png' },
-    { name: 'Only Organics', image: '/src/assets/images/brands/onlyorganics.png' },
-    { name: 'Lego Discovery Center', image: '/src/assets/images/brands/lego.png' }
+    { name: 'Skechers', image: skechersLogo },
+    { name: 'Starbucks', image: starbucksLogo },
+    { name: 'SuperPark', image: superparkLogo },
+    { name: 'MoPA', image: mopaLogo },
+    { name: 'NatPat', image: natpatLogo },
+    { name: 'BBox', image: bboxLogo },
+    { name: 'Dream Baby', image: dreambabyLogo },
+    { name: 'Twisted Ice Creams', image: twistedLogo },
+    { name: 'Only Organics', image: onlyorganicsLogo },
+    { name: 'Lego Discovery Center', image: legoLogo }
   ]
 
   return (

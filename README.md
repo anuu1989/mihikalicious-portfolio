@@ -2,7 +2,7 @@
 
 A modern, elegant portfolio website for Mihikalicious - Melbourne Mum showcasing family lifestyle content, brand collaborations, and creative work.
 
-**Live Site**: [mihikalicious-portfolio](https://yourusername.github.io/mihikalicious-portfolio/)
+**Live Site**: [mihikalicious.co](https://mihikalicious.co)
 
 ## ✨ Features
 
@@ -185,52 +185,58 @@ The `vite.config.js` includes:
 
 ## 🚀 Deployment
 
-### Automatic Deployment (Recommended)
+### Custom Domain Setup
+
+This site is configured to use the custom domain **mihikalicious.co**.
+
+**DNS Configuration Required**:
+
+Add these A records at your domain registrar:
+
+```
+Type: A, Name: @, Value: 185.199.108.153
+Type: A, Name: @, Value: 185.199.109.153
+Type: A, Name: @, Value: 185.199.110.153
+Type: A, Name: @, Value: 185.199.111.153
+```
+
+**GitHub Pages Settings**:
+1. Go to Settings → Pages
+2. Custom domain: `mihikalicious.co`
+3. Enable "Enforce HTTPS" after DNS verification
+
+See [CUSTOM_DOMAIN_SETUP.md](CUSTOM_DOMAIN_SETUP.md) for detailed instructions.
+
+### Automatic Deployment
 
 The site automatically deploys to GitHub Pages when you push to the `main` branch via GitHub Actions.
 
-**Setup Steps**:
+**Deployment Process**:
 
-1. **Enable GitHub Pages**:
-   - Go to repository Settings → Pages
-   - Source: Deploy from a branch
-   - Branch: `gh-pages` / `root`
-   - Save
-
-2. **Configure Base Path**:
-   - Update `vite.config.js` with your repository name:
-   ```javascript
-   base: '/your-repo-name/'
-   ```
-
-3. **Add Secrets** (optional):
-   - Add `VITE_GA_MEASUREMENT_ID` in repository secrets
-
-4. **Push to Main**:
+1. **Push to Main**:
    ```bash
    git add .
-   git commit -m "Deploy to GitHub Pages"
+   git commit -m "Update website"
    git push origin main
    ```
 
-5. **Access Your Site**:
-   - `https://yourusername.github.io/your-repo-name/`
+2. **GitHub Actions** builds and deploys automatically
 
-### Manual Deployment
+3. **Access Your Site**:
+   - Primary: `https://mihikalicious.co`
+   - GitHub Pages: `https://yourusername.github.io/repo-name/` (redirects to custom domain)
+
+### Manual Build
 
 ```bash
 # Build the project
 npm run build
 
+# Preview production build locally
+npm run preview
+
 # The dist/ folder contains the production build
-# Deploy the dist/ folder to your hosting service
 ```
-
-### Custom Domain (Optional)
-
-1. Add a `CNAME` file in `public/` with your domain
-2. Configure DNS settings with your domain provider
-3. Add `CUSTOM_DOMAIN` secret in GitHub repository
 
 ## 📱 Website Sections
 
