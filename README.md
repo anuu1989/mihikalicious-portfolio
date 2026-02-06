@@ -75,6 +75,7 @@ mihikalicious/
 │       └── deploy.yml           # GitHub Actions deployment workflow
 ├── public/
 │   ├── .nojekyll               # GitHub Pages configuration
+│   ├── CNAME                   # Custom domain configuration
 │   └── favicon.svg             # Custom favicon (M logo)
 ├── src/
 │   ├── assets/
@@ -118,10 +119,10 @@ mihikalicious/
 │   ├── App.css                 # App-level styles
 │   ├── main.jsx                # React entry point
 │   └── index.css               # Global styles & CSS variables
-├── server/                     # Optional Instagram scraper (not used)
 ├── .env.example                # Environment variables template
 ├── .env.production             # Production environment config
 ├── .gitignore                  # Git ignore rules
+├── CUSTOM_DOMAIN_SETUP.md      # Custom domain setup guide
 ├── eslint.config.js            # ESLint configuration
 ├── index.html                  # HTML template
 ├── package.json                # Dependencies & scripts
