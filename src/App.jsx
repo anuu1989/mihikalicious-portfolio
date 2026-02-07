@@ -7,6 +7,7 @@ import Brands from './components/Brands'
 import RateCard from './components/RateCard'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
+import WelcomeBanner from './components/WelcomeBanner'
 import { useAnalytics, trackSectionView } from './hooks/useAnalytics'
 import './App.css'
 
@@ -43,6 +44,7 @@ function App() {
 
   return (
     <div className="app">
+      <WelcomeBanner />
       <Navbar activeSection={activeSection} />
       <Hero />
       <About />
