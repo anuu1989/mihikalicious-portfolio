@@ -1,10 +1,21 @@
 import { useState, useEffect } from 'react'
 import './WelcomeBanner.css'
 import bannerImage from '../assets/images/banner.jpg'
+import bannerImageMobile from '../assets/images/banner-mobile.jpg'
 
 const WelcomeBanner = () => {
   const [isVisible, setIsVisible] = useState(false)
   const [isClosing, setIsClosing] = useState(false)
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768)
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768)
+    }
+
+    window.addEventListener('resize', handleResize)
+    return () => window.removeEventListener('resize', handleResize)
+  }, [])
 
   useEffect(() => {
     // Check if banner was already shown in this session
@@ -47,9 +58,11 @@ const WelcomeBanner = () => {
         </button>
 
         <div className="banner-content">
-          <div className="banner-image-container">
-            <img src={bannerImage} alt="Welcome to Mihikalicious" className="banner-image" />
-            <div className="banner-overlay-gradient"></div>
+          <div 
+            className="banner-image-section" 
+            style={{ backgroundImage: `url(${isMobile ? bannerImageMobile : bannerImage})` }}
+          >
+            <div className="image-overlay"></div>
           </div>
 
           <div className="banner-text">
